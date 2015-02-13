@@ -1,6 +1,7 @@
 package lsu.lsureferencesheets;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -37,6 +38,7 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -48,8 +50,11 @@ public class MainActivity extends ActionBarActivity
     }
 
 
-    public void goToManageClasses(){
 
+
+    public void goToManageClasses(View button){
+        Intent i = new Intent(this,ManageClasses.class);
+        startActivity(i);
     }
 
 
