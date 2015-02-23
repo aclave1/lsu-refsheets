@@ -1,8 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:titleTextStyle">@style/MyActionBarText</item>
+        <item name="android:actionButtonStyle">@style/MyActionBarButton</item>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+
+        <!--support library compatibility-->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="titleTextStyle">@style/MyActionBarText</item>
+        <item name="actionButtonStyle">@style/MyActionBarButton</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/basecolor</item>
+        <item name="android:titleTextStyle">@style/MyActionBarText</item>
+        <!-- Support library compatibility -->
+        <item name="background">@color/basecolor</item>
+        <item name="titleTextStyle">@style/MyActionBarText</item>
+    </style>
+
+    <style name="MyActionBarText"
+        parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <!--android:textColor is backwards compatible with support library-->
+    </style>
+
+    <style name="MyActionBarButton" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="android:background">@color/actionbarbtncolor</item>
+        <item name="background">@color/actionbarbtncolor</item>
+    </style>
+
+
+
+
+
+
+    <style name="actionsection">
+        <item name="android:background">@color/basecolor</item>
+        <item name="android:textColor">@color/textcolor</item>
     </style>
 
 </resources>

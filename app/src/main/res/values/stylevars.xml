@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="basecolor">#594D7A</color>
+    <color name="basecolor_light">#A599C6</color>
+    <color name="basecolor_xlight">#F1E5FF</color>
+    <color name="textcolor">#3F3360</color>
+    <color name="actionbarbtncolor">#ffffff</color>
+
+</resources>
