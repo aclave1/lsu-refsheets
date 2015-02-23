@@ -1,0 +1,6 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:choiceMode="singleChoice"
+    android:divider="@android:color/white" android:dividerHeight="0dp"
+    android:background="#111" tools:context=".NavigationDrawerFragment" />
+<!-- From: file:/home/micronx/Desktop/CSC_4243_Repo/4/app/src/main/res/layout/fragment_navigation_drawer.xml -->
