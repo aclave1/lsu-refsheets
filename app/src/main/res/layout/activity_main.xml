@@ -9,23 +9,7 @@
     <RelativeLayout android:id="@+id/container" android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <Button
-            android:onClick="goToManageClasses"
-            android:id="@+id/manageclassesbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Manage Classes"/>
-        <Button
-            android:id="@+id/addnotebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add note"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/manageclassesbtn"
-            android:layout_toEndOf="@+id/manageclassesbtn" />
-
         <fragment
-            android:layout_below="@id/addnotebtn"
             android:name="lsu.lsureferencesheets.ClassesFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></fragment>
