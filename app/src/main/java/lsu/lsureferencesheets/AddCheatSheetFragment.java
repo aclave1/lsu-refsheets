@@ -4,19 +4,16 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 
-public class ManageClassesFragment extends Fragment {
+public class AddCheatSheetFragment extends Fragment {
 
     ExpandableListAdapter listAdapter;
     List<String> listDataHeader;
@@ -29,7 +26,7 @@ public class ManageClassesFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         final ViewGroup _container = container;
 
-        View v = inflater.inflate(R.layout.activity_manage_classes,container,false);
+        View v = inflater.inflate(R.layout.fragment_addnote,container,false);
 
 
         ExpandableListView expandableListView = (ExpandableListView) v.findViewById(R.id.lvExp);

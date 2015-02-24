@@ -2,7 +2,6 @@ package lsu.lsureferencesheets;
 
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -67,10 +66,10 @@ public class MainActivity extends ActionBarActivity
             case 1:
                 break;
             case 2:
-                fragment = new ManageClassesFragment();
+                fragment = new AddCheatSheetFragment();
                 break;
             case 3:
-                fragment = new AddClassesFragment();
+                fragment = new ManageCourses();
                 break;
             default:
                 break;
@@ -78,7 +77,7 @@ public class MainActivity extends ActionBarActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction fragTransaction = fragmentManager.beginTransaction();
-        fragTransaction.replace(R.id.mainfrag, fragment);
+        fragTransaction.replace(R.id.container, fragment);
         fragTransaction.addToBackStack(null);
         fragTransaction.commit();
     }
@@ -89,10 +88,10 @@ public class MainActivity extends ActionBarActivity
                 mTitle = getString(R.string.home);
                 break;
             case 2:
-                mTitle = getString(R.string.manage_courses);
+                mTitle = getString(R.string.add_cheatsheet);
                 break;
             case 3:
-                mTitle = getString(R.string.add_cheatsheet);
+                mTitle = getString(R.string.manage_courses);
                 break;
         }
     }

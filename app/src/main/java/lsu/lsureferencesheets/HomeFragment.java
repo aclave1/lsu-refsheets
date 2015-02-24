@@ -93,8 +93,9 @@ public class HomeFragment extends Fragment {
 
     private TextView getSheetTitle(Context c, Sheet sheet) {
         TextView title = new TextView(c);
-        title.setGravity(Gravity.BOTTOM);
-
+        title.setGravity(Gravity.CENTER_HORIZONTAL);
+        title.setTypeface(null,Typeface.BOLD);
+        title.setTextColor(getResources().getColor(R.color.textcolor));
         title.setText(sheet.toString());
         return title;
     }
