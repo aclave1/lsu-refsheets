@@ -56,11 +56,10 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        Fragment fragment = new ClassesFragment();
+        Fragment fragment = new Fragment();
         switch (position+1) {
-            //TODO add the rest of the cases and fragments here
             case 1:
-                 break;
+                break;
             case 2:
                 fragment = new ClassesFragment();
                 break;
@@ -69,9 +68,10 @@ public class MainActivity extends ActionBarActivity
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
+        android.support.v4.app.FragmentTransaction fragTransaction = fragmentManager.beginTransaction();
+        fragTransaction.replace(R.id.container, fragment);
+        fragTransaction.addToBackStack(null);
+        fragTransaction.commit();
     }
 
     public void onSectionAttached(int number) {
