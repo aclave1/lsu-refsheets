@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import lsu.lsureferencesheets.listeners.SheetClickListener;
 import lsu.lsureferencesheets.model.Category;
 import lsu.lsureferencesheets.model.IRefSheetService;
 import lsu.lsureferencesheets.model.RefSheetService;
@@ -26,9 +27,6 @@ public class ClassesFragment extends Fragment {
 
     private final IRefSheetService service = new RefSheetService();
     private LinearLayout.LayoutParams linearParams;
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -110,13 +108,7 @@ public class ClassesFragment extends Fragment {
 
         int resId = sheet.resourceId != -1 ? sheet.resourceId : R.drawable.ic_launcher;
         image.setImageResource(resId);
-        image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(main, NoteView.class);
-                startActivity(i);
-            }
-        });
+        image.setOnClickListener(new SheetClickListener(main,sheet));
         return image;
     }
 

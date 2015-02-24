@@ -1,9 +1,13 @@
 package lsu.lsureferencesheets;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import lsu.lsureferencesheets.listeners.SheetClickListener;
 
 
 public class NoteView extends ActionBarActivity {
@@ -12,6 +16,8 @@ public class NoteView extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_view);
+        setupImage();
+
     }
 
 
@@ -35,5 +41,14 @@ public class NoteView extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void setupImage(){
+        Intent i = getIntent();
+        int imageId = i.getIntExtra(SheetClickListener.imageIdProp,R.drawable.ic_launcher);
+        ImageView image = (ImageView) findViewById(R.id.noteviewimage);
+        image.setImageResource(imageId);
+        image.requestLayout();
     }
 }
