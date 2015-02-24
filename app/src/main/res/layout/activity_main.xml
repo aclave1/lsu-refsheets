@@ -11,7 +11,7 @@
         style="@style/backgroundsection">
 
         <fragment
-            android:name="lsu.lsureferencesheets.ClassesFragment"
+            android:name="lsu.lsureferencesheets.HomeFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></fragment>
         </RelativeLayout>

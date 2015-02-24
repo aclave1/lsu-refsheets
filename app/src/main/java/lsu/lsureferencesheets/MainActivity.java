@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity
             case 1:
                 break;
             case 2:
-                fragment = new ClassesFragment();
+                fragment = new HomeFragment();
                 break;
             case 3:
                 break;

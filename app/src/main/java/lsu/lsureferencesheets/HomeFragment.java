@@ -23,7 +23,7 @@ import lsu.lsureferencesheets.model.RefSheetService;
 import lsu.lsureferencesheets.model.Sheet;
 
 
-public class ClassesFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     private final IRefSheetService service = new RefSheetService();
     private LinearLayout.LayoutParams linearParams;
@@ -124,6 +124,7 @@ public class ClassesFragment extends Fragment {
     //builds the "card" that wraps the sheet and sheet title
     private LinearLayout buildCard(Context c){
         LinearLayout card = new LinearLayout(c);
+        card.setElevation(2);
         LinearLayout.LayoutParams layoutparams = new LinearLayout.LayoutParams(200,325);
         card.setPadding(8,8,8,8);
         layoutparams.setMargins(10,10,10,10);
