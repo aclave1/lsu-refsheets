@@ -8,17 +8,40 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import lsu.lsureferencesheets.listeners.SheetClickListener;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import android.app.Activity;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.ExpandableListView.OnGroupClickListener;
+import android.widget.ExpandableListView.OnGroupCollapseListener;
+import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.Toast;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
 
 
 public class NoteView extends ActionBarActivity {
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_view);
         setupImage();
-
     }
+
+
+
+
+
+
 
 
     @Override
@@ -40,9 +63,9 @@ public class NoteView extends ActionBarActivity {
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
-
 
     public void setupImage(){
         Intent i = getIntent();

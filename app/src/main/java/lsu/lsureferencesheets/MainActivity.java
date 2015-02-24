@@ -1,5 +1,8 @@
 package lsu.lsureferencesheets;
+
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -51,19 +54,38 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+
+
+    }
+
+
+
+    public void goToManageClasses(View button){
+        Intent i = new Intent(this,ManageClasses.class);
+        startActivity(i);
+    }
+
+    public void goToNoteView(View button){
+        Intent i = new Intent(this,NoteView.class);
+        startActivity(i);
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        Fragment fragment = new Fragment();
+        Fragment fragment;
         switch (position+1) {
             case 1:
-                break;
-            case 2:
                 fragment = new HomeFragment();
                 break;
+            case 2:
+                fragment = new ManageClassesFragment();
+                break;
             case 3:
+                fragment = new AddClassesFragment();
+                break;
+            default:
                 break;
         }
 
