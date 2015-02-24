@@ -124,7 +124,6 @@ public class HomeFragment extends Fragment {
     //builds the "card" that wraps the sheet and sheet title
     private LinearLayout buildCard(Context c){
         LinearLayout card = new LinearLayout(c);
-        card.setElevation(2);
         LinearLayout.LayoutParams layoutparams = new LinearLayout.LayoutParams(200,325);
         card.setPadding(8,8,8,8);
         layoutparams.setMargins(10,10,10,10);
