@@ -1,4 +1,9 @@
 package lsu.lsureferencesheets;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,9 +16,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.content.Intent;
 
 import lsu.lsureferencesheets.model.IRefSheetService;
 import lsu.lsureferencesheets.model.RefSheetService;
+import android.support.v4.widget.DrawerLayout;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.ExpandableListView.OnGroupClickListener;
+import android.widget.ExpandableListView.OnGroupCollapseListener;
+import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.Toast;
 
 
 
@@ -51,6 +66,21 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+
+
+    }
+
+
+
+    public void goToManageClasses(View button){
+        Intent i = new Intent(this,ManageClasses.class);
+        startActivity(i);
+    }
+
+    public void goToNoteView(View button){
+        Intent i = new Intent(this,NoteView.class);
+        startActivity(i);
     }
 
     @Override

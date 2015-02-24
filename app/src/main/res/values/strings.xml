@@ -13,4 +13,24 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_manage_classes">ManageClasses</string>
 
+    <string name="name_file">Name New File</string>
+    <string name="save">Save</string>
+    <string name="loading">Loading</string>
+    <string name="url_link">https://</string>
+    <string name="media">Use Camera</string>
+
+
+        <string-array name="courseList">
+            <item>(select)</item>
+            <item>Acct</item>
+            <item>Art</item>
+            <item>History</item>
+            <item>ISDS</item>
+            <item>Algebra</item>
+            <item>Interface Design</item>
+            <item>Compilers</item>
+            <item>Data Structures</item>
+        </string-array>
+
+
 </resources>
