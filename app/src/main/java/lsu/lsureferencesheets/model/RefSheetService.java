@@ -6,6 +6,8 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
 
+import lsu.lsureferencesheets.R;
+
 public class RefSheetService implements IRefSheetService{
 
 
@@ -18,30 +20,30 @@ public class RefSheetService implements IRefSheetService{
     int mathCount = 0;
     int chemCount = 0;
     private Sheet[] csc4243Sheets = new Sheet[]{
-            new Sheet(cscCount,"Test1.png","Test1 sheet"),
-            new Sheet(++cscCount,"Test2.png","Test2 sheet"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet2"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet3"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet4"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet5"),
-            new Sheet(++cscCount,"Test1.png","Test1 sheet"),
-            new Sheet(++cscCount,"Test2.png","Test2 sheet"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet2"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet3"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet4"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet5"),
-            new Sheet(++cscCount,"Test1.png","Test1 sheet"),
-            new Sheet(++cscCount,"Test2.png","Test2 sheet"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet2"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet3"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet4"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet5"),
-            new Sheet(++cscCount,"Test1.png","Test1 sheet"),
-            new Sheet(++cscCount,"Test2.png","Test2 sheet"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet2"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet3"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet4"),
-            new Sheet(++cscCount,"Test21.png","Test2 sheet5"),
+            new Sheet(cscCount, R.drawable.csc3,"Test1 sheet"),
+            new Sheet(++cscCount,R.drawable.csc1,"Test2 sheet"),
+            new Sheet(++cscCount,R.drawable.csc4,"Test2 sheet2"),
+            new Sheet(++cscCount,R.drawable.csc5,"Test2 sheet3"),
+            new Sheet(++cscCount,R.drawable.csc6,"Test2 sheet4"),
+            new Sheet(++cscCount,R.drawable.csc7,"Test2 sheet5"),
+            new Sheet(++cscCount,R.drawable.csc2,"Test1 sheet"),
+            new Sheet(++cscCount,R.drawable.csc1,"Test2 sheet"),
+            new Sheet(++cscCount,R.drawable.csc2,"Test2 sheet2"),
+            new Sheet(++cscCount,R.drawable.csc3,"Test2 sheet3"),
+            new Sheet(++cscCount,R.drawable.csc4,"Test2 sheet4"),
+            new Sheet(++cscCount,R.drawable.csc5,"Test2 sheet5"),
+            new Sheet(++cscCount,R.drawable.csc6,"Test1 sheet"),
+            new Sheet(++cscCount,R.drawable.csc7,"Test2 sheet"),
+            new Sheet(++cscCount,R.drawable.csc4,"Test2 sheet2"),
+            new Sheet(++cscCount,R.drawable.csc6,"Test2 sheet3"),
+            new Sheet(++cscCount,R.drawable.csc3,"Test2 sheet4"),
+            new Sheet(++cscCount,R.drawable.csc1,"Test2 sheet5"),
+            new Sheet(++cscCount,R.drawable.csc6,"Test1 sheet"),
+            new Sheet(++cscCount,R.drawable.csc5,"Test2 sheet"),
+            new Sheet(++cscCount,R.drawable.csc4,"Test2 sheet2"),
+            new Sheet(++cscCount,R.drawable.csc2,"Test2 sheet3"),
+            new Sheet(++cscCount,R.drawable.csc1,"Test2 sheet4"),
+            new Sheet(++cscCount,R.drawable.csc2,"Test2 sheet5"),
     };
 
     private Sheet[] math1550Sheets = new Sheet[]{

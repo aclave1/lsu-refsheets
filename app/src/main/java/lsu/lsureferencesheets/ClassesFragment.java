@@ -16,8 +16,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import lsu.lsureferencesheets.model.Category;
 import lsu.lsureferencesheets.model.IRefSheetService;
 import lsu.lsureferencesheets.model.RefSheetService;
@@ -27,6 +25,9 @@ import lsu.lsureferencesheets.model.Sheet;
 public class ClassesFragment extends Fragment {
 
     private final IRefSheetService service = new RefSheetService();
+    private LinearLayout.LayoutParams linearParams;
+
+
 
 
     @Override
@@ -35,11 +36,9 @@ public class ClassesFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_classlist,container,false);
         Context c = v.getContext();
         LinearLayout sv = (LinearLayout) v.findViewById(R.id.classlist_scroll);
-
         for(Category cat : service.getCategories()){
             addRow(c,sv,cat);
         }
-
         return v;
     }
 
@@ -48,15 +47,15 @@ public class ClassesFragment extends Fragment {
     private void addRow(Context c,LinearLayout mainList,Category cat){
         LinearLayout wrapper = new LinearLayout(c);
         wrapper.setOrientation(LinearLayout.VERTICAL);
-        wrapper.setMinimumHeight(200);
-        wrapper.setMinimumWidth(200);
+        wrapper.setMinimumHeight(300);
+        wrapper.setMinimumWidth(300);
 
-        TextView title = buildTitle(c,cat);
+        TextView title = buildTitle(c, cat);
 
         HorizontalScrollView row = new HorizontalScrollView(c);
         LinearLayout rowScroll = new LinearLayout(c);
         rowScroll.setOrientation(LinearLayout.HORIZONTAL);
-        rowScroll.setMinimumHeight(200);
+        rowScroll.setMinimumHeight(300);
         rowScroll.setMinimumWidth(200);
         for(Sheet sheet : cat.getSheets()){
             addItem(c,rowScroll,sheet);
@@ -79,31 +78,12 @@ public class ClassesFragment extends Fragment {
     private void addItem(Context c, LinearLayout row, Sheet sheet){
         final Activity main = getActivity();
         LinearLayout card = buildCard(c);
+        card.setBaselineAligned(false);
 
 
+        TextView title = getSheetTitle(c, sheet);
 
-
-
-
-
-        TextView title = new TextView(c);
-        title.setText(sheet.toString());
-
-        ImageView image = new ImageView(c);
-        center(image);
-
-        image.setMinimumHeight(200);
-        image.setMinimumWidth(200);
-
-
-        image.setImageResource(R.drawable.ic_launcher);
-        image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(main, NoteView.class);
-                startActivity(i);
-            }
-        });
+        ImageView image = buildImageView(c, sheet);
 
 
         card.addView(image);
@@ -113,32 +93,53 @@ public class ClassesFragment extends Fragment {
         row.addView(card);
     }
 
-    private void center(View v){
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100,100);
-        params.gravity = Gravity.CENTER;
-        v.setLayoutParams(params);
+    private TextView getSheetTitle(Context c, Sheet sheet) {
+        TextView title = new TextView(c);
+        title.setGravity(Gravity.BOTTOM);
+
+        title.setText(sheet.toString());
+        return title;
+    }
+
+    private ImageView buildImageView(Context c, Sheet sheet) {
+        final Activity main = getActivity();
+        ImageView image = new ImageView(c);
+
+
+        styleImage(image);
+
+        int resId = sheet.resourceId != -1 ? sheet.resourceId : R.drawable.ic_launcher;
+        image.setImageResource(resId);
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(main, NoteView.class);
+                startActivity(i);
+            }
+        });
+        return image;
     }
 
 
+    private void styleImage(View v){
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100,100);
+        params.gravity = Gravity.CENTER;
+        params.height = 250;
+        params.width= 200;
+        v.setLayoutParams(params);
+    }
+
+    //builds the "card" that wraps the sheet and sheet title
     private LinearLayout buildCard(Context c){
         LinearLayout card = new LinearLayout(c);
-
-        LinearLayout.LayoutParams layoutparams = new LinearLayout.LayoutParams(200,200);
+        LinearLayout.LayoutParams layoutparams = new LinearLayout.LayoutParams(200,325);
+        card.setPadding(8,8,8,8);
         layoutparams.setMargins(10,10,10,10);
         card.setOrientation(LinearLayout.VERTICAL);
         card.setBackgroundColor(getResources().getColor(R.color.basecolor_light));
         card.setLayoutParams(layoutparams);
-
-
-
         return card;
     }
-
-
-
-
-
-
 
 
 }
