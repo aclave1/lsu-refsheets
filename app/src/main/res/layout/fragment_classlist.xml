@@ -3,7 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <ScrollView
         android:id="@+id/classlist"
         android:layout_gravity="bottom"
@@ -13,6 +12,7 @@
             android:id="@+id/classlist_scroll"
             android:orientation="vertical"
             android:layout_width="wrap_content"
+            android:background="@android:color/white"
             android:layout_height="wrap_content"></LinearLayout>
     </ScrollView>
 
