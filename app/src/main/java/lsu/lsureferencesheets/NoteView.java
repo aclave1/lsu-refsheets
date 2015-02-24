@@ -23,7 +23,7 @@ import android.widget.Toast;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 
-
+//the view after clicking a note
 public class NoteView extends ActionBarActivity {
 
 

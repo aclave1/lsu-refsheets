@@ -22,7 +22,7 @@ import lsu.lsureferencesheets.model.IRefSheetService;
 import lsu.lsureferencesheets.model.RefSheetService;
 import lsu.lsureferencesheets.model.Sheet;
 
-
+//shows the rows of sheets
 public class HomeFragment extends Fragment {
 
     private final IRefSheetService service = new RefSheetService();

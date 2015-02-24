@@ -59,18 +59,6 @@ public class MainActivity extends ActionBarActivity
 
     }
 
-
-
-    public void goToManageClasses(View button){
-        Intent i = new Intent(this,ManageClasses.class);
-        startActivity(i);
-    }
-
-    public void goToNoteView(View button){
-        Intent i = new Intent(this,NoteView.class);
-        startActivity(i);
-    }
-
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
