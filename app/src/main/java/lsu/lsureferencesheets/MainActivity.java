@@ -1,6 +1,7 @@
 package lsu.lsureferencesheets;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -47,9 +48,8 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        Fragment fragment = new ClassesFragment();
+        Fragment fragment = new Fragment();
         switch (position+1) {
-            //TODO add the rest of the cases and fragments here
             case 1:
                  break;
             case 2:
@@ -58,11 +58,12 @@ public class MainActivity extends ActionBarActivity
             case 3:
                 break;
         }
-
+        
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
+        android.support.v4.app.FragmentTransaction fragTransaction = fragmentManager.beginTransaction();
+        fragTransaction.replace(R.id.container, fragment);
+        fragTransaction.addToBackStack(null);
+        fragTransaction.commit();
     }
 
     public void onSectionAttached(int number) {
