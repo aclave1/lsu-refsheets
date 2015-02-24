@@ -10,4 +10,9 @@ public class Sheet {
         this.filename = filename;
         this.title = title;
     }
+
+    @Override
+    public String toString(){
+        return title;
+    }
 }

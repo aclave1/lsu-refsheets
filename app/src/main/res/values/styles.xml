@@ -47,4 +47,8 @@
         <item name="android:textColor">@color/textcolor</item>
     </style>
 
+    <style name="backgroundsection">
+        <item name="android:background">@color/basecolor_xlight</item>
+    </style>
+
 </resources>
